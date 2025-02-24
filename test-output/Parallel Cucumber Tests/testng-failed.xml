@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests" name="Failed suite [Parallel Cucumber Tests]" guice-stage="DEVELOPMENT">
+  <test thread-count="1" parallel="tests" name="Chrome Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="Runner.Runner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+          <include name="setBrowser"/>
+        </methods>
+      </class> <!-- Runner.Runner -->
+    </classes>
+  </test> <!-- Chrome Test(failed) -->
+</suite> <!-- Failed suite [Parallel Cucumber Tests] -->
