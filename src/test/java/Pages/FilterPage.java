@@ -41,21 +41,40 @@ public WebElement get_dropdown_list(){
 }
 
 public String[] get_allresult_list(){
+	
+	
+		List<WebElement> list=allresult;
+		 String [] str=new String[list.size()];
+	   for(int i=1; i<=list.size(); i++) {
+		  
+		str[i-1]=DriverFactory.getdriver().findElement(By.xpath("//div[@class='inventory_list']/div[" +i+"]/div[2]/div[1]/a")).getText();
+		   
+	   }
+	   
+	 
+	
+	  return str;
+ //div[@class='inventory_list']/div[1]/div[2]/div[2]/div
+}
+
+public String[] get_allresult_listPrice(){
+	
+	
 	List<WebElement> list=allresult;
 	 String [] str=new String[list.size()];
    for(int i=1; i<=list.size(); i++) {
 	  
-	str[i-1]=DriverFactory.getdriver().findElement(By.xpath("//div[@class='inventory_list']/div[" +i+"]/div[2]/div[1]/a")).getText();
+	str[i-1]=DriverFactory.getdriver().findElement(By.xpath("//div[@class='inventory_list']/div["+i+"]/div[2]/div[2]/div")).getText();
+	
 	   
    }
    
-   return str;
+ 
+
+  return str;
 
 }
 
-public List<WebElement> get_itemlist_list(){
-	return itemlist;
-}
 
 
 

@@ -58,14 +58,14 @@ Given open the url
 When Enter the username and password "<username>" "<password>" 
 Then Click on the login button
 Then verify the msg "<msg>"
-Then get all the results 
+Then get all the results "<dropdown>"
 Then get all the dropdowns from the dropdown
 Then select the dropdown "<dropdown>" 
-Then varify according to dropdown selected
+Then varify according to dropdown selected "<dropdown>"
 
 Examples:
 |username|password|msg|dropdown|
-|standard_user|secret_sauce|Swag Labs|Name (Z to A)|
+|standard_user|secret_sauce|Swag Labs|Price (high to low)|
 
 
 
